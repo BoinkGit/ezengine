@@ -2,4 +2,10 @@ echo hi i am the coolest guy ever
 file: apples - 4
 file: text - "hi i am joan"
 file: points - apples
+read file: apples
 increment file apples by 7
+read file: apples
+echo this is an echo
+file: not_echo - "this is a file"
+read file: not_echo
+echo this will not print the last symbol

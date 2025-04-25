@@ -1,4 +1,4 @@
 echo hi i am the coolest guy ever
 file: apples - 4
 file: text - "hi i am joan"
-file: points - :apples
+file: points - apples

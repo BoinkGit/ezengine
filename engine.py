@@ -13,9 +13,6 @@ error = 0
 
 for line in lines:
     code = line.split()
-    for i in range(len(code)):
-        if code[i][0] == ":":
-            code[i] = str(variables[code[i][1:]])
     if code[0] == "echo":
         print(line[5:])
     elif code[0] == "file:":
@@ -23,6 +20,8 @@ for line in lines:
             print(f"The code translator couldn't understand the code. Please replace \"{code[2]}\" with \"-\".")
             error += 1
             break
+        if code[3] in variables:
+            variables[code[1]] = variables[code[3]]
         if code[3][0] in ["\"","\'"]:
             variables[code[1]] = " ".join(code[3:])[1:-1]
         else:
